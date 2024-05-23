@@ -1,0 +1,26 @@
+from collections import namedtuple
+
+City = namedtuple("City", ("name ,country ,population ,coordinates"))
+
+tokyo = City("Tokyo", "JP", 36.933, (35.69, 139.691))
+
+# print("\n+\n")
+# print(tokyo)
+
+# print(tokyo.population)
+# print(tokyo.coordinates)
+
+
+# print(City._fields)
+
+LatLong = namedtuple("LatLong", "lat long")
+
+delhi_data = ("Delhi ncr", "In", "21.95", LatLong("28.61", "77.20"))
+
+delhi = City._make(delhi_data)
+
+print(delhi)
+
+delhi_dic = delhi._asdict()
+
+print(delhi_dic)
